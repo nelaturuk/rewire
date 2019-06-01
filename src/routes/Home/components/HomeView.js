@@ -20,11 +20,11 @@ export class HomeView extends Component {
   render() {
     return (
       <div>
-        <div style={{float:'left', width: 350}}><img
+        <div style={{float:'left', width: '50%'}}><img
           width="350px"
           alt='This is a duck, because Redux!'
           src={'https://source.unsplash.com/random'} /></div>
-        <div><form noValidate>
+        <div style={{width:'50%', float: 'right'}}><form noValidate>
           <TextField
             variant="outlined"
             margin="normal"
