@@ -13,8 +13,7 @@ import Signin from '../components/Signin'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapDispatchToProps = {
-  signIn : () => signIn(),
-  signOut
+  signIn
 }
 
 const mapStateToProps = (state) => ({

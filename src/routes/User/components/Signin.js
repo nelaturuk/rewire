@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
- function SignInSide() {
+function SignInSide({ signIn }) {
   const classes = useStyles();
 
   return (
@@ -91,6 +91,7 @@ const useStyles = makeStyles(theme => ({
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={ signIn }
             >
               Sign In
             </Button>
@@ -113,4 +114,4 @@ const useStyles = makeStyles(theme => ({
   );
 }
 
-export default SignInSide;
+export default SignInSide
