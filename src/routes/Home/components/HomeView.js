@@ -9,7 +9,6 @@ import './HomeView.scss'
 export class HomeView extends Component {
   constructor(props) {
     super(props);
-    console.log(this.state)
   }
 
   componentDidMount() {
@@ -20,7 +19,7 @@ export class HomeView extends Component {
     return (
       <div>
         <h4>Welcome!</h4>
-        {/* Connected to Web3 :  {this.props.web3Wrap.isConnected} */}
+        <div>Connected to Web3 :  {JSON.stringify(this.props.web3Wrap.isConnected)}</div>
         <img alt='This is a duck, because Redux!' className='duck' src={DuckImage} />
       </div>
     );
@@ -32,6 +31,7 @@ export class HomeView extends Component {
 // }
 
 const mapStateToProps = (state) => ({
+  web3Wrap: state.web3Wrap 
 })
 
 const mapDispatchToProps = {
