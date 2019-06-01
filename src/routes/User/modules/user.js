@@ -1,30 +1,37 @@
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
-export const COUNTER_DOUBLE_ASYNC = 'COUNTER_DOUBLE_ASYNC'
+export const USER_SIGNIN = 'USER_SIGNIN'
+export const USER_SIGNOUT = 'USER_SIGNOUT'
 
 // ------------------------------------
 // Actions
 // ------------------------------------
-export function increment (value = 1) {
-  return {
-    type    : COUNTER_INCREMENT,
-    payload : value
-  }
-}
 
 /*  This is a thunk, meaning it is a function that immediately
     returns a function for lazy evaluation. It is incredibly useful for
     creating async actions, especially when combined with redux-thunk! */
-
-export const doubleAsync = () => {
+export const signIn = () => {
   return (dispatch, getState) => {
     return new Promise((resolve) => {
       setTimeout(() => {
         dispatch({
-          type    : COUNTER_DOUBLE_ASYNC,
-          payload : getState().counter
+          type    : USER_SIGNIN,
+          payload : getState().user
+        })
+        resolve()
+      }, 200)
+    })
+  }
+}
+    
+
+export const signOut = () => {
+  return (dispatch, getState) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        dispatch({
+          type    : USER_SIGNOUT
         })
         resolve()
       }, 200)
@@ -33,23 +40,26 @@ export const doubleAsync = () => {
 }
 
 export const actions = {
-  increment,
-  doubleAsync
+  signIn,
+  signOut
 }
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]    : (state, action) => state + action.payload,
-  [COUNTER_DOUBLE_ASYNC] : (state, action) => state * 2
+  [USER_SIGNIN]    : (state, action) => action.payload,
+  [USER_SIGNOUT] : (state, action) => state
 }
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = 0
-export default function counterReducer (state = initialState, action) {
+const initialState = {
+  id : undefined,
+  password : undefined
+}
+export default function userReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 
   return handler ? handler(state, action) : state
