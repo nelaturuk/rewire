@@ -6,7 +6,8 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import {browserHistory} from 'react-router';
+import { browserHistory } from 'react-router';
+import LandingImage from '../assets/landing.jpg'
 
 
 
@@ -26,51 +27,11 @@ export class HomeView extends Component {
 
   render() {
     return (
-      <div>
-        <div style={{float:'left', width: '50%'}}><img
-          width="350px"
+      <img
           alt='This is a duck, because Redux!'
-          src={'https://source.unsplash.com/random'} /></div>
-        <div style={{width:'50%', float: 'right'}}><form noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={this.handleClick}
-            style={{backgroundColor: '#c3ebe2', color: '#000000'}}
-          >
-            Sign In
-          </Button>
-
-        </form></div>
-      </div>
+          src={LandingImage}
+          width="1450px" 
+          onClick={this.handleClick}/>
     );
   }
 }

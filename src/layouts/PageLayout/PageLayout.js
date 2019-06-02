@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import './PageLayout.scss'
 
 export const PageLayout = ({ children }) => (
-  <div className='container text-center'>
-    <h1>Rewire</h1>
-    <div className='page-layout__viewport'>
-      {children}
-    </div>
+  <div>
+    {/* <div className='page-layout__viewport'>
+      
+    </div> */}
+    {children}
   </div>
 )
 PageLayout.propTypes = {

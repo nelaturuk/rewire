@@ -178,7 +178,8 @@ export class Invest extends Component {
     const { showTable, showForm, showInvestments } = this.state;
 
     return (
-      <div>
+      <div  className='container text-center'>
+        <h1>Rewire</h1>
         <div style={{ display: showTable }}>
           <Paper className={classes.root}>
             <Table className={classes.table}>

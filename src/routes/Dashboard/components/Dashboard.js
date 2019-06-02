@@ -98,7 +98,8 @@ class Dashboard extends Component {
         const style = { "padding": "120px 0" }
 
         return (
-            <div>
+            <div  className='container text-center'>
+                <h1>Rewire</h1>
                 <Grid container spacing={4}>
                     <Grid item xs={4}>
                         <Paper>
