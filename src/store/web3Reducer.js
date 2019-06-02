@@ -1,4 +1,5 @@
 import Web3 from 'web3'
+const Tx = require('ethereumjs-tx')
 // import truffleConfig from '../../truffle.js'
 
 // ------------------------------------
@@ -31,7 +32,8 @@ export function web3Connected ({ web3, isConnected }) {
     type: WEB3_CONNECTED,
     payload: {
       web3,
-      isConnected
+      isConnected,
+      Tx
     }
   }
 }

@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import {browserHistory} from 'react-router';
+
 
 
 export class HomeView extends Component {
@@ -15,6 +17,11 @@ export class HomeView extends Component {
 
   componentDidMount() {
     this.props.web3Connect();
+  }
+
+  handleClick = (e) => {
+    e.preventDefault();
+    browserHistory.push('/invest');
   }
 
   render() {
@@ -56,6 +63,8 @@ export class HomeView extends Component {
             fullWidth
             variant="contained"
             color="primary"
+            onClick={this.handleClick}
+            style={{backgroundColor: '#c3ebe2', color: '#000000'}}
           >
             Sign In
           </Button>

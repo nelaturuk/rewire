@@ -3,7 +3,7 @@
 // ------------------------------------
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 export const COUNTER_DOUBLE_ASYNC = 'COUNTER_DOUBLE_ASYNC'
-
+export const GET_USER_ADDRESS = 'GET_USER_ADDRESS'
 // ------------------------------------
 // Actions
 // ------------------------------------
@@ -32,6 +32,20 @@ export const doubleAsync = () => {
   }
 }
 
+export const getUserAddress = () => {
+  return (dispatch, getState) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        dispatch({
+          type    : GET_USER_ADDRESS,
+          payload : getState().counter
+        })
+        resolve()
+      }, 200)
+    })
+  }
+}
+
 export const actions = {
   increment,
   doubleAsync
@@ -42,7 +56,8 @@ export const actions = {
 // ------------------------------------
 const ACTION_HANDLERS = {
   [COUNTER_INCREMENT]    : (state, action) => state + action.payload,
-  [COUNTER_DOUBLE_ASYNC] : (state, action) => state * 2
+  [COUNTER_DOUBLE_ASYNC] : (state, action) => state * 2,
+  [GET_USER_ADDRESS] : (state, action) => state + action.payload
 }
 
 // ------------------------------------
