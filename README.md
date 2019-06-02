@@ -10,11 +10,13 @@ The primary goal of this project is that individuals can invest shares of green 
 1. [Installation](#getting-started)
 1. [Running the Project](#running-the-project)
 1. [Project Structure](#project-structure)
+1. [Calculartion formular](#formula)
 1. [Thank You](#thank-you)
 
 ## Requirements
 * node `^5.0.0`
 * yarn `^0.23.0` or npm `^3.0.0`
+
 
 ## Installation
 
@@ -86,6 +88,14 @@ The project structure presented in this boilerplate is **fractal**, where functi
 │   └── styles               # Application-wide styles (generally settings)
 └── tests                    # Unit tests
 ```
+
+## Calculation Formular
+
+Percentage of bill reduction for the month given 10 ETH investment = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount)/ current monthly household consumption * conversion ratio 
+Investor receive in dividend in ETH = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount) * Power Purchase Agreement price* gross margin/ETH spot price
+Total value of investment in ETH = value of the all project tokens owned + all dividends in ETH
+Fees charged by the platform = 2% * Total project investment * percentage of funds raised through platform
+Management fee charged by the platform = 0.5% * monthly distribution of dividends
 
 ## Thank You
 
