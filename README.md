@@ -91,11 +91,15 @@ The project structure presented in this boilerplate is **fractal**, where functi
 
 ## Calculation Formular
 
-Percentage of bill reduction for the month given 10 ETH investment = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount)/ current monthly household consumption * conversion ratio 
-Investor receive in dividend in ETH = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount) * Power Purchase Agreement price* gross margin/ETH spot price
-Total value of investment in ETH = value of the all project tokens owned + all dividends in ETH
-Fees charged by the platform = 2% * Total project investment * percentage of funds raised through platform
-Management fee charged by the platform = 0.5% * monthly distribution of dividends
+**Percentage of bill reduction for the month given 10 ETH investment** = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount)/ current monthly household consumption * conversion ratio 
+
+**Investor receive in dividend in ETH** = current monthly production of the solar panel * (dollar equivalent of 10 ETH /total project investment amount) * Power Purchase Agreement price* gross margin/ETH spot price
+
+**Total value of investment in ETH** = value of the all project tokens owned + all dividends in ETH
+
+**Fees charged by the platform** = 2% * Total project investment * percentage of funds raised through platform
+
+**Management fee charged by the platform** = 0.5% * monthly distribution of dividends
 
 ## Thank You
 
