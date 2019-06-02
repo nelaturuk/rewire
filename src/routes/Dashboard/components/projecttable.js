@@ -23,11 +23,8 @@ function createData(name, amount, percentage, dividend, date) {
 }
 
 const rows = [
-  createData('Eco Adventures', 159, 6.0, 4.0, "2019/03/19"),
-  createData('Biome Body', 237, 9.0, 4.3, "2019/02/19"),
-  createData('Earth Cycles', 262, 16.0, 6.0, "2018/10/09"),
-  createData('Green Society', 305, 3.7, 4.3, "2018/02/27"),
-  createData('Urban Jungle', 356, 16.0, 3.9, "2019/03/18"),
+  createData('Community solar: McNab-Braeside', 159, 6.0, 4.0, "2019/03/19"),
+  createData('Smart city transportation project', 237, 9.0, 4.3, "2019/02/19")
 ];
 
 function ProjectTable() {
