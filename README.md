@@ -18,7 +18,7 @@ The primary goal of this project is that individuals can invest shares of green 
 
 ## Installation
 
-After confirming that your environment meets the above [requirements](#requirements), you can create a new project based on `react-redux-starter-kit` by doing the following:
+After confirming that your environment meets the above [requirements](#requirements), you can create a new project based on `rewire` by doing the following:
 
 ```bash
 $ git clone https://github.com/nelaturuk/rewire.git <my-project-name>
